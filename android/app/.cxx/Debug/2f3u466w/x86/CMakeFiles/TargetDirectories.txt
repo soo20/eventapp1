@@ -1,0 +1,2 @@
+G:/ROUTE2/eventapp1/android/app/.cxx/Debug/2f3u466w/x86/CMakeFiles/edit_cache.dir
+G:/ROUTE2/eventapp1/android/app/.cxx/Debug/2f3u466w/x86/CMakeFiles/rebuild_cache.dir
