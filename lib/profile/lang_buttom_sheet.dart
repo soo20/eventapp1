@@ -17,7 +17,7 @@ class LangButtomSheet extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           InkWell(
-            onTap: () {
+            onTap: () async {
               langProvider.changeLanguage("en");
             },
             //
@@ -34,7 +34,7 @@ class LangButtomSheet extends StatelessWidget {
           ),
           SizedBox(height: height * 0.04),
           InkWell(
-            onTap: () {
+            onTap: () async {
               langProvider.changeLanguage("ar");
             },
             child:

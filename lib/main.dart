@@ -1,5 +1,6 @@
+import 'package:eventapp1/profile/profile_page.dart';
 import 'package:eventapp1/utilized/app_theme.dart';
-import 'package:eventapp1/profile/home_screen.dart';
+
 import 'package:eventapp1/home_screen2.dart';
 import 'package:eventapp1/provider/app_lang_provider.dart';
 import 'package:eventapp1/provider/app_theme_provider.dart';
@@ -7,7 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(
     MultiProvider(
       // it create provider that i will use
@@ -42,7 +44,7 @@ class MyApp extends StatelessWidget {
 
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
-      themeMode: themeProvider.appThem,
+      themeMode: themeProvider.appTheme,
     );
   }
 }

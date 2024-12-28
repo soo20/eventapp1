@@ -1,5 +1,5 @@
 import 'package:eventapp1/utilized/colorrtheme.dart';
-import 'package:eventapp1/provider/app_lang_provider.dart';
+
 import 'package:eventapp1/provider/app_theme_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -18,22 +18,22 @@ class ThemeButtomSheet extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           InkWell(
-            onTap: () {
+            onTap: () async {
               themeProvider.changeTheme(ThemeMode.dark);
             },
             //
             child:
-                themeProvider.appThem == ThemeMode.dark
+                themeProvider.appTheme == ThemeMode.dark
                     ? getSelected(context, AppLocalizations.of(context)!.dark)
                     : unSelected(context, AppLocalizations.of(context)!.dark),
           ),
           SizedBox(height: height * 0.04),
           InkWell(
-            onTap: () {
+            onTap: () async {
               themeProvider.changeTheme(ThemeMode.light);
             },
             child:
-                themeProvider.appThem == ThemeMode.light
+                themeProvider.appTheme == ThemeMode.light
                     ? getSelected(context, AppLocalizations.of(context)!.light)
                     : unSelected(context, AppLocalizations.of(context)!.light),
           ),

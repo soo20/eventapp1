@@ -1,7 +1,8 @@
 import 'package:eventapp1/home/home_page.dart';
 import 'package:eventapp1/love/love_page.dart';
 import 'package:eventapp1/map/map_page.dart';
-import 'package:eventapp1/profile/home_screen.dart';
+import 'package:eventapp1/profile/profile_page.dart';
+
 import 'package:eventapp1/utilized/colorrtheme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
