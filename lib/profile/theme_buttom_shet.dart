@@ -1,15 +1,16 @@
-import 'package:eventapp1/colorrtheme.dart';
+import 'package:eventapp1/utilized/colorrtheme.dart';
 import 'package:eventapp1/provider/app_lang_provider.dart';
+import 'package:eventapp1/provider/app_theme_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
-class LangButtomSheet extends StatelessWidget {
-  const LangButtomSheet({super.key});
+class ThemeButtomSheet extends StatelessWidget {
+  const ThemeButtomSheet({super.key});
 
   @override
   Widget build(BuildContext context) {
-    var langProvider = Provider.of<AppLangProvider>(context);
+    var themeProvider = Provider.of<AppThemeProvider>(context);
     var height = MediaQuery.of(context).size.height;
     return Padding(
       padding: const EdgeInsets.all(18.0),
@@ -18,29 +19,23 @@ class LangButtomSheet extends StatelessWidget {
         children: [
           InkWell(
             onTap: () {
-              langProvider.changeLanguage("en");
+              themeProvider.changeTheme(ThemeMode.dark);
             },
             //
             child:
-                langProvider.appLanguage == "en"
-                    ? getSelected(
-                      context,
-                      AppLocalizations.of(context)!.english,
-                    )
-                    : unSelected(
-                      context,
-                      AppLocalizations.of(context)!.english,
-                    ),
+                themeProvider.appThem == ThemeMode.dark
+                    ? getSelected(context, AppLocalizations.of(context)!.dark)
+                    : unSelected(context, AppLocalizations.of(context)!.dark),
           ),
           SizedBox(height: height * 0.04),
           InkWell(
             onTap: () {
-              langProvider.changeLanguage("ar");
+              themeProvider.changeTheme(ThemeMode.light);
             },
             child:
-                langProvider.appLanguage == "ar"
-                    ? getSelected(context, AppLocalizations.of(context)!.arabic)
-                    : unSelected(context, AppLocalizations.of(context)!.arabic),
+                themeProvider.appThem == ThemeMode.light
+                    ? getSelected(context, AppLocalizations.of(context)!.light)
+                    : unSelected(context, AppLocalizations.of(context)!.light),
           ),
         ],
       ),

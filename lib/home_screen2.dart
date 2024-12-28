@@ -1,4 +1,8 @@
-import 'package:eventapp1/colorrtheme.dart';
+import 'package:eventapp1/home/home_page.dart';
+import 'package:eventapp1/love/love_page.dart';
+import 'package:eventapp1/map/map_page.dart';
+import 'package:eventapp1/profile/home_screen.dart';
+import 'package:eventapp1/utilized/colorrtheme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -12,7 +16,7 @@ class HomeScreen2 extends StatefulWidget {
 
 class _HomeScreen2State extends State<HomeScreen2> {
   int selectIndex = 0;
-
+  List<Widget> screens = [HomePage(), MapPage(), LovePage(), ProfilePage()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,8 +24,8 @@ class _HomeScreen2State extends State<HomeScreen2> {
         data: Theme.of(context).copyWith(canvasColor: Colors.transparent),
         child: BottomAppBar(
           padding: EdgeInsets.zero,
-          color: Colorrtheme.primaryLight,
-          notchMargin: 3,
+          color: Theme.of(context).primaryColor,
+          notchMargin: 1,
           shape: CircularNotchedRectangle(),
           child: BottomNavigationBar(
             currentIndex: selectIndex,
@@ -58,9 +62,10 @@ class _HomeScreen2State extends State<HomeScreen2> {
           ),
         ),
       ),
+      body: screens[selectIndex],
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        child: Icon(Icons.add, color: Colorrtheme.whiteColor, size: 35),
+        child: Icon(Icons.add, color: Colorrtheme.whiteColor, size: 40),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );

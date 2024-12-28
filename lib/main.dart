@@ -1,5 +1,5 @@
-import 'package:eventapp1/app_theme.dart';
-import 'package:eventapp1/home_screen.dart';
+import 'package:eventapp1/utilized/app_theme.dart';
+import 'package:eventapp1/profile/home_screen.dart';
 import 'package:eventapp1/home_screen2.dart';
 import 'package:eventapp1/provider/app_lang_provider.dart';
 import 'package:eventapp1/provider/app_theme_provider.dart';
@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
       initialRoute: HomeScreen2.route,
       routes: {
         HomeScreen2.route: (context) => HomeScreen2(),
-        HomeScreen.route: (context) => HomeScreen(),
+        ProfilePage.route: (context) => ProfilePage(),
       },
 
       theme: AppTheme.lightTheme,

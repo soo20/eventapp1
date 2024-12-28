@@ -1,4 +1,4 @@
-import 'package:eventapp1/colorrtheme.dart';
+import 'package:eventapp1/utilized/colorrtheme.dart';
 import 'package:flutter/material.dart';
 
 class AppTheme {

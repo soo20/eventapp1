@@ -9,5 +9,9 @@
     "home" : "Home",
     "map" : "Map",
     "love" : "Love",
-    "profile" : "Profile"
+    "profile" : "Profile",
+    "welcom" : "Welcome Back",
+    "soha" : "Soha Nagy",
+    "city" : " Cairo , Egypt",
+    "en" : "EN"
   }

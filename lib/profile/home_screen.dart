@@ -1,21 +1,21 @@
-import 'package:eventapp1/colorrtheme.dart';
-import 'package:eventapp1/lang_buttom_sheet.dart';
+import 'package:eventapp1/utilized/colorrtheme.dart';
+import 'package:eventapp1/profile/lang_buttom_sheet.dart';
 import 'package:eventapp1/provider/app_lang_provider.dart';
 import 'package:eventapp1/provider/app_theme_provider.dart';
-import 'package:eventapp1/theme_buttom_shet.dart';
+import 'package:eventapp1/profile/theme_buttom_shet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
-  static const String route = "home screen";
+class ProfilePage extends StatefulWidget {
+  const ProfilePage({super.key});
+  static const String route = "Profile Page";
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<ProfilePage> createState() => _ProfilePageState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     var langProvider = Provider.of<AppLangProvider>(context);
